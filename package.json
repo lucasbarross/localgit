@@ -1,0 +1,26 @@
+{
+  "name": "localgit",
+  "version": "1.0.0",
+  "description": "A CLI application to commit changes from a local folder to another.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasbarross/localgit.git"
+  },
+  "author": "Lucas Barros",
+  "license": "ISC",
+  "bin": {
+    "localgit": "./bin/index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/lucasbarross/localgit/issues"
+  },
+  "homepage": "https://github.com/lucasbarross/localgit#readme",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "ini": "^1.3.5"
+  }
+}
