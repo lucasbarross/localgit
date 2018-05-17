@@ -1,6 +1,6 @@
 {
   "name": "localgit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI application to commit changes from a local folder to another.",
   "main": "index.js",
   "preferGlobal": true,
