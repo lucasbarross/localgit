@@ -1,12 +1,19 @@
-var fs = require('fs');
-var ini = require('ini')
+const fs = require('fs');
+const ini = require('ini')
+const util = require('./util')
 
 function link(current, to){
     try{
-        var dir = current+'/.localgit';
-        var configDir = dir + '/config.ini';
-        var config = {};
-
+        const dir = current+'/.localgit', 
+              gitignore = current + '/.gitignore',
+              configDir = dir + '/config.ini'
+        
+        let config = {};
+        
+        if(fs.existsSync(gitignore))
+            if(!util.hasIgnored(fs.readFileSync(gitignore, 'utf-8')))
+                fs.appendFileSync(gitignore, '\n.localgit\n')
+        
         if (!fs.existsSync(dir))
             fs.mkdirSync(dir);
         
@@ -20,5 +27,11 @@ function link(current, to){
         console.log(err);
     }
 }
+
+function push() {
+
+}
+
+
 
 module.exports = { link }

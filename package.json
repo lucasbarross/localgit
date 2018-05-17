@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A CLI application to commit changes from a local folder to another.",
   "main": "index.js",
+  "preferGlobal": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
