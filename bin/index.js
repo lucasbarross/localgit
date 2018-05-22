@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-var program = require('commander');
-var actions = require('./logic');
-var path = require('path')
+const program = require('commander');
+const actions = require('./logic');
+const path = require('path')
 
 program
   .version('1.0.1')
@@ -15,4 +15,12 @@ program
     actions.link(process.cwd(), directory);
   })
   
+program
+  .command('push')
+  .alias('p')
+  .description('Pushes current directory files to the linked one.')
+  .action(function(directory){
+    actions.push(process.cwd());
+  })
+
 program.parse(process.argv);
