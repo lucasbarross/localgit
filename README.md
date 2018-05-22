@@ -7,7 +7,7 @@ npm i -g localgit
 
 ## Steps
 1. Link your current folder to the one you want to push changes
-    ```Python console
+    ```console
     C:\Users\Example\Projects-Development\foo> localgit link "C:\Users\Example\Projects-Production\foo"
     ```
     Now I can push changes from `C:\Users\Example\Projects-Development\foo` to `C:\Users\Example\Projects-Production\foo`
